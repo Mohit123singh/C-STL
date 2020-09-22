@@ -33,4 +33,6 @@ This  code includes the concepts of the following things which are as follows:
 
 14.Use of  *max_element(a,a+n) in array................
 
+15. Binary Search STL functions...............
+
 
