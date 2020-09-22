@@ -10,6 +10,109 @@
 
 using namespace std;
 
+//Binary search
+
+void binary_search_stl_function()
+{
+    int a[]={1,4,5,8,9};
+
+    //if x exits in array or not.....
+
+    bool res=binary_search(a,a+n,3);    //false;
+
+    bool res=binary_search(a,a+n,4);    //true;
+
+    //lower_bound
+
+    //If element exits in array then it points to that element....
+    //Otherwise it points to next greater element........
+
+    //syntax
+    int a[]={1,4,5,6,9,9};
+
+    int index=lower_bound(a,a+n,4)-a;  //1
+    int index=lower_bound(a,a+n,7)-a;  //4
+    int index=lower_bound(a,a+n,10)-a; //it always point to end..
+
+    //vector...
+
+    int index=lower_bound(v.begin(),v.end(),4)-v.begin();
+
+
+    //Upper-bound........
+
+    //it always point to next greater element...........
+
+    //syntax
+    int a[]={1,4,5,6,9,9};
+
+    int index=upper_bound(a,a+n,4)-a;  //2
+    int index=upper_bound(a,a+n,7)-a;  //4
+    int index=upper_bound(a,a+n,10)-a; //it always point to end.......
+
+    //vector
+    int index=upper_bound(v.begin(),v.end(),4)-v.begin();
+
+    //Exercise
+
+    //find the first-occurrence of x in a sorted array...
+    //if it does not exist,print -1............
+
+    int a[]={1,4,4,4,4,9,9,10,11};
+    int ind=lower_bound(a,a+n,x)-a;
+    if(ind!=n && a[ind]==x)
+        cout<<ind;
+    else
+        cout<<-1;
+
+    //find the last-occurrence of x in a sorted array...
+    //if it does not exist,print -1............
+
+    int a[]={1,4,4,4,4,9,9,10,11};
+    int ind=upper_bound(a,a+n,x)-a;
+    ind--;
+    if(ind>=0 && a[ind]==x)
+        cout<<ind<<endl;
+    elsecout<<"-1";
+
+    //Find the largest number smaller than x in a sorted array......
+    //if it does not exist,print -1............
+
+    int a[]={1,4,4,4,4,9,9,10,11};
+    int ind=lower_bound(a,a+n,x)-a;
+    index--;
+    if(index>=0)
+        cout << a[index];
+    else
+        cout<<"-1";
+
+    //Find the smallest number greater than x in a sorted array......
+    //if it does not exist,print -1............
+
+    int a[]={1,4,4,4,4,9,9,10,11};
+    int ind=upper_bound(a,a+n,x)-a;
+    if(ind>=n)
+        cout<<"-1";
+    else
+        cout<<a[ind];
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 //pairs
 
 void Explain_pair()
